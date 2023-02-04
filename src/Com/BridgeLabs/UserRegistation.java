@@ -13,6 +13,16 @@ public class UserRegistation {
             System.out.println(Firstname +" is Invalid");
         }
 	}
+	public void UserLastName(String Lastname) {
+		Pattern LastNamepattern = Pattern.compile("^[A-Z]+[a-z]{2,}$");
+		Matcher matcher = LastNamepattern.matcher(Lastname);
+        if (matcher.matches()) {
+            System.out.println(Lastname +" -Valid");
+        } else {
+            System.out.println(Lastname +" is Invalid");
+        }
+	}
+	
 
 
 }
