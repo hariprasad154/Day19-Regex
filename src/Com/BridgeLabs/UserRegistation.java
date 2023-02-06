@@ -22,7 +22,24 @@ public class UserRegistation {
             System.out.println(Lastname +" is Invalid");
         }
 	}
+//	public void UserEmail(String Email) {
+//		Pattern EmailPattern = Pattern.compile("^[A-Z0-9+_.-]+@[A-Z0-9.-]+$");
+//		Matcher matcher = EmailPattern.matcher(Email);
+//        if (matcher.matches()) {
+//            System.out.println(Email +" -Valid");
+//        } else {
+//            System.out.println(Email +" is Invalid");
+//        }
+//	}
 	
 
-
+	public void PhineNumber(String phonNum) {
+		Pattern phonNumMatcher = Pattern.compile("^[+]?[0-9]{2}[\\s]{1}[0-9]{10}$");
+		Matcher matcher = phonNumMatcher.matcher(phonNum);
+        if (matcher.matches()) {
+            System.out.println(phonNum +" -Valid");
+        } else {
+            System.out.println(phonNum +" is Invalid");
+        }
+	}
 }
