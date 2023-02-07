@@ -38,7 +38,7 @@ public class UserRegistation {
 	}
 	
 
-	public void PhineNumber(String phonNum) {
+	public void PhoneNumber(String phonNum) {
 		Pattern phonNumMatcher = Pattern.compile("^[+]?[0-9]{2}[\\s]{1}[0-9]{10}$");
 		Matcher matcher = phonNumMatcher.matcher(phonNum);
         if (matcher.matches()) {
@@ -48,7 +48,7 @@ public class UserRegistation {
         }
 	}
 	public void Password(String Password) {
-		Pattern PasswordMatcher = Pattern.compile("^[a-zA-Z0-9]{8,16}");
+		Pattern PasswordMatcher = Pattern.compile("[a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*{8,16}$");
 		Matcher matcher = PasswordMatcher.matcher(Password);
         if (matcher.matches()) {
             System.out.println(Password +" -Valid");
