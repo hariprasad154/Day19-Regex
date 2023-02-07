@@ -47,12 +47,19 @@ public class UserRegistation {
             System.out.println(phonNum +" is Invalid");
         }
 	}
+	
+		
+	
 	public void Password(String Password) {
-		Pattern PasswordMatcher = Pattern.compile("[a-zA-Z0-9]*[A-Z]+[1-9]+[a-zA-Z0-9]*{8,16}$");
+		//my pattern    [a-zA-Z0-9]*[A-Z]+[1-9]+[a-zA-Z0-9]*{8,16}$
+		Pattern PasswordMatcher = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{8,20}$");
+		//^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$
 		Matcher matcher = PasswordMatcher.matcher(Password);
+		
         if (matcher.matches()) {
             System.out.println(Password +" -Valid");
         } else {
+        	
             System.out.println(Password +" is Invalid");
         }
 	}
