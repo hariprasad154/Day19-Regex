@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class UserRegistationTest {
     //    Scanner src = new Scanner(System.in);
-    static UserRegistation obj;
+    static UserRegistation obj=new UserRegistation();
 
     //the True Values
     //        Hari -Valid
@@ -21,8 +21,8 @@ public class UserRegistationTest {
 //        System.out.println("enter the firstName");
 //        String firstName = src.next();
         //      obj.userFirstName(firstName);
-        boolean result = obj.userFirstName("Hari");
-        System.out.println(result);
+
+        boolean result=obj.userFirstName("Hari");
         Assertions.assertTrue(result);
 
     }
@@ -32,10 +32,8 @@ public class UserRegistationTest {
         System.out.println("The last Name Testing ");
 //        System.out.println("enter the lastName");
 //        String lastName = src.next();
-        boolean result = obj.userLastName("prasad");
+        boolean result = obj.userLastName("Prasad");
         Assertions.assertTrue(result);
-
-
     }
 
     @Test
