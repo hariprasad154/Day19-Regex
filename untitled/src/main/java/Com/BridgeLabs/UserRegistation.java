@@ -41,9 +41,9 @@ public class UserRegistation {
     }
 
     public boolean userEmail(String email) {
-        Pattern EmailPattern = Pattern.compile("^[a-z]{3}[.]{1}[a-zA-z]{1,}+@+[a-z]{2,}[.]{1}+co+[.]?[a-z]{0,}$");
-        Matcher matcher = EmailPattern.matcher(email);
-        Boolean result=matcher.matches();
+        Pattern emailPattern = Pattern.compile("^[a-z]{3}[.]{1}[a-zA-z]{1,}+@+[a-z]{2,}[.]{1}+co+[.]?[a-z]{0,}$");
+        Matcher matcher = emailPattern.matcher(email);
+//        Boolean result=matcher.matches();
         if (matcher.matches()) {
             System.out.println(email + " -Valid");
             return true;
