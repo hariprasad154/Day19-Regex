@@ -28,7 +28,7 @@ public class UserRegistation {
         }
 	}
 	public void UserEmail(String Email) {
-		Pattern EmailPattern = Pattern.compile("^[a-z]{3}[.]{1}[a-zA-z]{1,}+@+[a-z]{2,}[.]{1}+co+[.]?[a-z]{0,}$");
+		Pattern EmailPattern = Pattern.compile("^[A-Za-z0-9+_.-]+@(.+)$");
 		Matcher matcher = EmailPattern.matcher(Email);
         if (matcher.matches()) {
             System.out.println(Email +" -Valid");
