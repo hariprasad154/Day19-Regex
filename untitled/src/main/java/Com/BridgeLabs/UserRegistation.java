@@ -4,13 +4,16 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class UserRegistation {
+
+
     public boolean userFirstName(String firstName) {
+
         /*
          * the A-Z lattters 1 or more capital latters  and a|-z more than 2 latters
          * has to be taken
          */
-
         Pattern FirstNamepattern = Pattern.compile("^[A-Z]+[a-z]{2,}$");
         Matcher matcher = FirstNamepattern.matcher(firstName);
         Boolean result=matcher.matches();
@@ -24,6 +27,7 @@ public class UserRegistation {
 
     }
 
+
     public boolean userLastName(String LastName) {
         Pattern LastNamepattern = Pattern.compile("^[A-Z]+[a-z]{2,}$");
         Matcher matcher = LastNamepattern.matcher(LastName);
@@ -36,8 +40,6 @@ public class UserRegistation {
             System.out.println(LastName + " is Invalid");
             return false;
         }
-
-
     }
 
     public boolean userEmail(String email) {
@@ -55,7 +57,7 @@ public class UserRegistation {
     }
 
 
-    public boolean phoneNumber(String phonNum) {
+        public boolean phoneNumber (String phonNum){
         Pattern phonNumMatcher = Pattern.compile("^[+]?[0-9]{2}[\\s]?[0-9]{10}$");
         Matcher matcher = phonNumMatcher.matcher(phonNum);
         Boolean result=matcher.matches();
@@ -68,11 +70,9 @@ public class UserRegistation {
         }
 
 
-    }
-
-
-    public boolean password(String password) {
-        //my pattern    [a-zA-Z0-9]*[A-Z]+[1-9]+[a-zA-Z0-9]*{8,16}$
+        }
+        public boolean password (String password){
+//            my pattern    [a-zA-Z0-9]*[A-Z]+[1-9]+[a-zA-Z0-9]*{8,16}$
         Pattern PasswordMatcher = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{8,20}$");
         //^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$
         Matcher matcher = PasswordMatcher.matcher(password);
@@ -86,7 +86,8 @@ public class UserRegistation {
             return false;
         }
 
-    }
+        }
+
 
     public void User() {
         Scanner src = new Scanner(System.in);
@@ -120,3 +121,4 @@ public class UserRegistation {
 
 
 }
+
